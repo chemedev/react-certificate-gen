@@ -72,7 +72,7 @@ const Form = (props) => {
           name="name"
           onChange={changeHandler}
           className="italic"
-          placeholder="Johnny False"
+          placeholder="Johnny Platzi"
           type="text"
           value={props.name}
         />
@@ -83,7 +83,7 @@ const Form = (props) => {
           name="course"
           onChange={changeHandler}
           className="italic"
-          placeholder="Fullstack Forever"
+          placeholder="Full-Stack Sr"
           type="text"
           value={props.course}
         />
