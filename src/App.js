@@ -2,11 +2,34 @@ import React, { useState } from 'react';
 import Form from './Form';
 import Certificate from './Certificate';
 
+const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+
+const today = {
+  month: new Date().getMonth(),
+  day: new Date().getDate(),
+  year: new Date().getFullYear(),
+};
+
 const App = () => {
   const [name, setName] = useState('Johnny Platzi');
   const [course, setCourse] = useState('Full-Stack Sr.');
-  const [date, setDate] = useState('Jan 6, 2020');
-  const [logo, setLogo] = useState(require('./logos/placeholder.png'))
+  const [date, setDate] = useState(
+    `${months[today.month]} ${today.day}, ${today.year}`
+  );
+  const [logo, setLogo] = useState(require('./logos/placeholder.png'));
 
   return (
     <>
